@@ -7,7 +7,7 @@ def simple_inputs():
     print('What is the principle amount?')
     principle = float(input('Enter amount: '))
     print('What will your yearly interest be on your investment?')
-    interest = float(input('Enter your yearly interest: '))
+    interest = float(input('Enter your yearly interest rate: '))
 
     total_interest = (principle*years*interest)/100
     total = total_interest+principle
@@ -33,15 +33,16 @@ def result1():
 print('Would you like to calculate the simple interest, or compounding interest on the loan?')
 type_int = input(print('Enter "simple" or "compounding":'))
 
-
-if type_int.lower() == "simple":
-    simple_inputs()
-elif type_int.lower() == "compounding":
-    compound_interest(0,0,0),
-    result1()
-else:
-    print('That is not a valid entry.')
+def main():
+    if type_int.lower() == "simple":
+        simple_inputs()
+    elif type_int.lower() == "compounding":
+        compound_interest(0,0,0),
+        result1()
+    else:
+        print('That is not a valid entry.')
 
 if __name__ == "__main__":
-    pass
+    main()
+
 
