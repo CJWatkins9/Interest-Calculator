@@ -31,16 +31,22 @@ def result1():
     print("Compound interest is %.2f" % interest)
 
 print('Would you like to calculate the simple interest, or compounding interest on the loan?')
-type_int = input(print('Enter "simple" or "compounding":'))
 
 def main():
-    if type_int.lower() == "simple":
-        simple_inputs()
-    elif type_int.lower() == "compounding":
-        compound_interest(0,0,0),
-        result1()
-    else:
-        print('That is not a valid entry.')
+    calculator = True
+    while calculator:
+        type_int = input(print('Enter "simple" or "compounding":'))
+        if type_int.lower() == "simple":
+            simple_inputs()
+            calculator = False
+        elif type_int.lower() == "compounding":
+            compound_interest(0,0,0),
+            result1()
+            calculator = False
+        else:
+            print('That is not a valid entry.')
+            
+        
 
 if __name__ == "__main__":
     main()
